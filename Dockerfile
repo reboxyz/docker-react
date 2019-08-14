@@ -10,6 +10,7 @@ RUN npm run build
 # Note! /app/build is the complete path of the result of 'npm run build'
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # Note! nginx default port is 80
 
